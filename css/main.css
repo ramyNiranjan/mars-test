@@ -56,6 +56,8 @@ body {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .nav {
@@ -245,7 +247,7 @@ body {
         flex-wrap: nowrap;
     -webkit-clip-path: none;
             clip-path: none;
-    height: 8vh;
+    height: 50px;
     background: transparent;
     -webkit-transition: none;
     transition: none;
@@ -316,8 +318,8 @@ body {
       flex-wrap: nowrap;
   background-size: cover;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, from(#c15555), color-stop(#240202), to(transparent)), url("../images/page-1/hero-1.jpg") center center;
-  background: linear-gradient(to bottom, #c15555, #240202, transparent), url("../images/page-1/hero-1.jpg") center center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c1555500), to(#2402028e)), url("../images/page-1/hero-1.jpg") center center;
+  background: linear-gradient(to bottom, #c1555500, #2402028e), url("../images/page-1/hero-1.jpg") center center;
 }
 
 .hero-mars-one__oval {
@@ -360,22 +362,27 @@ body {
   color: #fff;
   font-size: 25px;
   font-weight: bold;
-  border-bottom: 3px solid #fff;
-  line-height: 1.2;
+  margin-bottom: 12px;
+  line-height: 1.1;
   letter-spacing: 0.59px;
+}
+
+.hero-mars-one__header-wrapper {
+  border-bottom: 3px solid #fff;
 }
 
 .hero-mars-one__text {
   color: #436dac;
   font-size: 14px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 @media (min-width: 760px) {
   .hero-mars-one__oval {
     left: -8%;
-    top: -30%;
-    height: 120%;
+    top: -35%;
+    height: 130%;
     width: 120%;
     bottom: 0;
   }
@@ -730,8 +737,9 @@ body {
       flex-wrap: nowrap;
   background-size: cover;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, from(#c15555), color-stop(#240202), to(transparent)), url("../images/page-2/hero-2.jpg");
-  background: linear-gradient(to bottom, #c15555, #240202, transparent), url("../images/page-2/hero-2.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c15555), to(#240202af)), url("../images/page-2/hero-2.jpg");
+  background-image: linear-gradient(to bottom, #c15555, #240202af), url("../images/page-2/hero-2.jpg");
+  background-position: center center;
 }
 
 .hero-faq__oval {
@@ -744,6 +752,7 @@ body {
   -webkit-clip-path: circle(75% at 60% 0%);
           clip-path: circle(75% at 60% 0%);
   background: rgba(21, 52, 98, 0.9);
+  z-index: 1;
 }
 
 .hero-faq__oval::after {
@@ -757,6 +766,7 @@ body {
   background: #00132c;
   -webkit-clip-path: circle(75% at 60% 0%);
           clip-path: circle(75% at 60% 0%);
+  z-index: 1;
 }
 
 .hero-faq__content {
@@ -774,22 +784,27 @@ body {
   color: #fff;
   font-size: 25px;
   font-weight: bold;
-  border-bottom: 3px solid #fff;
+  margin-bottom: 14px;
   line-height: 1.2;
   letter-spacing: 0.59px;
+}
+
+.hero-faq__header-wrapper {
+  border-bottom: 3px solid #fff;
 }
 
 .hero-faq__text {
   color: #436dac;
   font-size: 14px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 @media (min-width: 760px) {
   .hero-faq__oval {
     left: -8%;
-    top: -30%;
-    height: 120%;
+    top: -35%;
+    height: 130%;
     width: 120%;
     bottom: 0;
   }
@@ -1193,7 +1208,6 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1237,7 +1251,7 @@ body {
   top: 0;
   height: 104%;
   width: 100%;
-  bottom: 0;
+  bottom: -20%;
   background: #00132c;
   -webkit-clip-path: ellipse(75% 90% at 30% 111%);
           clip-path: ellipse(75% 90% at 30% 111%);
@@ -1259,15 +1273,20 @@ body {
   color: #fff;
   font-size: 25px;
   font-weight: bold;
-  border-bottom: 3px solid #fff;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: 0.59px;
+  margin-bottom: 15px;
+}
+
+.hero-join-the-crew__header-wrapper {
+  border-bottom: 3px solid #fff;
 }
 
 .hero-join-the-crew__text {
   color: #436dac;
   font-size: 14px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 @media (min-width: 800px) {
@@ -1473,8 +1492,8 @@ body {
   .form__header {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: fit-content(450px);
-        grid-template-columns: fit-content(450px);
+    -ms-grid-columns: fit-content(460px);
+        grid-template-columns: fit-content(460px);
     -ms-grid-rows: (fit-content(200px))[2];
         grid-template-rows: repeat(2, fit-content(200px));
     text-align: center;
@@ -1484,12 +1503,12 @@ body {
     color: #e32700;
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .form__header-text {
     color: #2c4f80;
     font-size: 24px;
-    font-weight: medium;
+    font-weight: normal;
   }
   .form__wrapper {
     display: -ms-grid;
